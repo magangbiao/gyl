@@ -436,21 +436,36 @@ export default {
 </script>
 
 <style lang="scss">
+.tools-left,
+.tools-right{
+  border: 1px solid #e5e5e5;
+}
 .el-radio-button {
   height: 48px;
   line-height: 48px;
+  border-right: 1px solid #e5e5e5;
   .el-radio-button__inner {
     height: 48px;
     line-height: 22px;
     background-color: #fafafa;
+    border: 0 none;
   }
 }
 .el-radio-button.is-active {
+  border: 0 none;
+  border-right: 1px solid #e5e5e5;
   .el-radio-button__inner {
     background-color: #ffffff;
-    color: #0168b7;
-    border: 1px solid #e5e5e5;
+    color: #0778ce;
+    border: 0 none;
+    
   }
+}
+.el-radio-button:first-child .el-radio-button__inner{
+  border-left: 0 none;
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+  box-shadow: -1px 0 0 0 #ffffff;
 }
 .el-radio-button__orig-radio:checked + .el-radio-button__inner {
   box-shadow: none;

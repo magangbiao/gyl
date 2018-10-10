@@ -242,7 +242,34 @@
                 </div>
               </div>
               <div class="con">
-
+                <div class="left">
+                  <el-input v-model="input"></el-input>
+                </div>
+                <div class="right">
+                  <el-select v-model="value2" placeholder="请选择">
+                    <el-option
+                      v-for="item in options"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value">
+                    </el-option>
+                  </el-select>
+                </div>
+              </div>
+              <div class="con">
+                <div class="left">
+                  <el-input v-model="input"></el-input>
+                </div>
+                <div class="right">
+                  <el-select v-model="value3" placeholder="请选择">
+                    <el-option
+                      v-for="item in options"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value">
+                    </el-option>
+                  </el-select>
+                </div>
               </div>
             </div>
           </div>
@@ -252,9 +279,9 @@
     <div class="s-small-banner container">
       <img src="@/assets/img_033.png" alt="">
     </div>
-    <!-- 仓储物流 -->
+    <!-- 仓储物流 -->  
     <div class="s-storage-wrap container">
-      <div class="s-storage-title">
+      <div>
         <span>仓储物流</span>
       </div>
       <div class="s-storage-con">
@@ -545,7 +572,16 @@ export default {
           value: "铁路"
         }
       ],
+      options:[{
+        value: '选项1',
+        label: '美元'
+      },{
+        value: '选项2',
+        label: '人民币'
+      }],
       value: "公路",
+      value2:"美元",
+      value3:"人民币",
       input: "",
       line_items: [
         {
@@ -788,6 +824,7 @@ export default {
           .top {
             display: flex;
             align-items: center;
+          
           }
           .btns {
             text-align: center;
@@ -984,6 +1021,7 @@ export default {
         border-left: 4px solid #0168b7;
       }
       .offer-more {
+        cursor: pointer;
         line-height: 24px;
         color: #999999;
       }
@@ -1060,10 +1098,20 @@ export default {
     .top{
       padding: 15px;
       display: flex;
+      border: 1px solid #e5e5e5;
+      background-color: #f9f9f9;
       .left{
         width: 60px;
         height: 60px;
         background: url(../assets/img/currency_03.png);
+      }
+    }
+    .con{
+      display: flex;
+      margin-top: 20px;
+      .left{
+        width: 85px;
+        margin-right: 20px;
       }
     }
   }
@@ -1144,6 +1192,7 @@ export default {
       font-size: 14px;
       color: #999999;
       line-height: 30px;
+      cursor: pointer;
       i {
         font-size: 20px;
         font-weight: 700;
@@ -1203,10 +1252,11 @@ export default {
           color: #555555;
         }
         .title-more {
+          cursor: pointer;
           color: #999999;
           line-height: 26px;
         }
-      }
+      } 
     }
     .s-menu-con {
       .menu-line-item {

@@ -75,6 +75,7 @@
       width: 65px;
       height: 65px;
       text-align: center;
+      cursor: pointer;
       border-bottom: 1px solid #e5e5e5;
       &:nth-last-child(1){
         border-bottom: 0 none;

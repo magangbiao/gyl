@@ -43,15 +43,15 @@
               <div class="info">2018-07-10</div>
               <div class="title">发布时间</div>
             </div>
-             <div class="goods-info-item">
+            <div class="goods-info-item">
               <div class="info">吨</div>
               <div class="title">单位</div>
             </div>
-             <div class="goods-info-item">
+            <div class="goods-info-item">
               <div class="info">南京</div>
               <div class="title">国家</div>
             </div>
-             <div class="goods-info-item">
+            <div class="goods-info-item">
               <div class="info">132</div>
               <div class="title">厂号</div>
             </div>
